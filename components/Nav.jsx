@@ -1,22 +1,13 @@
 "use client";
 
-import { useState, useEffect, useMemo, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Menu, ShoppingCart } from "lucide-react";
-// import { useCart } from "@/context/cartContext";
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
-//   const { cart } = useCart();
 
-  // Memoize cart item count to prevent unnecessary recalculations
-//   const cartItemCount = useMemo(
-//     () => cart.reduce((total, item) => total + item.quantity, 0),
-//     [cart]
-//   );
-
-  // Close mobile menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -30,7 +21,7 @@ const Nav = () => {
   return (
     <>
       {/* Navigation */}
-      <nav className="w-full h-16 flex items-center justify-between px-6 text-black backdrop-blur-md z-10">
+      <nav className="w-full h-16 flex items-center justify-between px-6 text-black backdrop-blur-lg bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-90 border-b border-white/20 shadow-md z-10">
         {/* Logo */}
         <Link href="/">
           <img src="/logo.png" alt="Company Logo" className="h-12 w-auto md:h-16 cursor-pointer" />
@@ -49,11 +40,6 @@ const Nav = () => {
           {/* Cart Icon */}
           <Link href="/cart" className="relative text-black">
             <ShoppingCart className="h-6 w-6 hover:text-blue-500 transition" />
-            {/* {cartItemCount > 0 && (
-              <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full">
-                {cartItemCount}
-              </span>
-            )} */}
           </Link>
 
           {/* Mobile Menu Button */}
