@@ -3,10 +3,12 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Menu, ShoppingCart } from "lucide-react";
+import { useCart } from "@/context/cartContext";
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
+    const { cart } = useCart(); // Assuming you have a cart context to manage cart items
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -40,6 +42,11 @@ const Nav = () => {
           {/* Cart Icon */}
           <Link href="/cart" className="relative text-black">
             <ShoppingCart className="h-6 w-6 hover:text-blue-500 transition" />
+                {cart.length > 0 && (
+                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full px-2 py-0.5">
+                    {cart.length}
+                </span>
+                )}
           </Link>
 
           {/* Mobile Menu Button */}
