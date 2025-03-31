@@ -12,7 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "SkyCyte",
+  title: "SkyCyte - Where Health Meets Technology",
+  keywords: "Skycyte, medical supplies, e-commerce, healthcare technology",
   description: "Skycyte is an medical supplies e-commerce platform",
   icons: {
     icon: "/favicon.ico",
