@@ -70,8 +70,9 @@ export default function Products() {
                       className="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 transition"
                     />
                   </Link>
-                  <h3 className="mt-4 text-sm text-gray-700">{name}</h3>
-                  <p className="mt-1 text-lg font-medium text-gray-900">Kshs. {price.toFixed(2)}</p>
+                  <h3 className="mt-4 text-sm text-blue-700">{name}</h3>
+                  <h3 className="mt-4 text-sm text-blue-700">In Stock: {stock}</h3>
+                  <p className="mt-1 text-lg font-medium text-gray-900">@ Kshs. {price.toFixed(2)}</p>
 
                   <button
                     disabled={stock === 0}
