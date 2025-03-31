@@ -32,7 +32,7 @@ const Cart = () => {
   };
 
   const placeOrder = () => {
-    const phoneNumber = "254703628177"; // Corrected format (without `+`)
+    const phoneNumber = "254725381288"; // Corrected format (without `+`)
     const orderMessage = cartItems
       .map(item => `- ${item.name} (Qty: ${item.quantity}) - Kshs. ${(Number(item.price) * item.quantity).toFixed(2)}`)
       .join("\n");
@@ -55,7 +55,7 @@ const Cart = () => {
       ) : (
         <div className="divide-y divide-gray-700">
           {cartItems.map(item => (
-            <div key={item.id} className="flex items-center justify-between py-4">
+            <div key={item._id} className="flex items-center justify-between py-4">
               <div>
                 <h3 className="text-lg font-medium text-gray-200">{item.name}</h3>
                 <p className="text-gray-400">Kshs. {(Number(item.price) || 0).toFixed(2)}</p>
