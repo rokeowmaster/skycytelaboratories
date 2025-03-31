@@ -30,7 +30,7 @@ const Nav = () => {
   return (
     <>
       {/* Navigation */}
-      <nav className="absolute top-0 left-0 w-full h-16 flex items-center justify-between px-6 text-black backdrop-blur-md z-10">
+      <nav className="w-full h-16 flex items-center justify-between px-6 text-black backdrop-blur-md z-10">
         {/* Logo */}
         <Link href="/">
           <img src="/logo.png" alt="Company Logo" className="h-12 w-auto md:h-16 cursor-pointer" />
