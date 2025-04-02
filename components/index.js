@@ -6,5 +6,6 @@ import Sponsors from "./Sponsors";
 import Testimonials from "./Testimonials";
 import About from "./About";
 import ProductShowcase from "./ProductShowcase";
+import BestSellers from "./BestSellers";
 
-export { Banner, Footer, Nav, Hero, Sponsors, Testimonials, About, ProductShowcase };
+export { Banner, Footer, Nav, Hero, Sponsors, BestSellers, Testimonials, About, ProductShowcase };
