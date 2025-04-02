@@ -15,7 +15,7 @@ const BestSellers = () => {
         { id: 2, name: 'Digital Thermometer', price: '25.99', image: '/thermometer.webp' },
         { id: 3, name: 'Medical Gloves', price: '8.99', image: '/gloves.jpg' },
         { id: 4, name: 'Hand Sanitizer 500ml', price: '5.99', image: '/sanitizers.jpg' },
-        { id: 5, name: 'Blood Pressure Monitor', price: '45.99', image: '/bp-monitor.jfif' },
+        { id: 5, name: 'Blood Pressure Monitor', price: '45.99', image: '/bp-monitor.webp' },
         { id: 6, name: 'Pulse Oximeter', price: '18.99', image: '/oximeter.jpg' },
         { id: 7, name: 'Surgical Gown', price: '14.99', image: '/gown.png' },
         { id: 8, name: 'First Aid Kit', price: '29.99', image: '/first-aid-kit.webp' },
