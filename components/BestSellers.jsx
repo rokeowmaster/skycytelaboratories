@@ -31,12 +31,12 @@ const BestSellers = () => {
       <h2 className="text-3xl font-bold text-center mb-6">Best Sellers</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {products.map((product) => (
-          <Link href={`/product/${product.id}`} key={product.id} className="block p-4 border rounded-lg shadow-lg hover:shadow-xl transition">
+          <Link href="/products" key={product.id} className="block p-4 border rounded-lg shadow-lg hover:shadow-xl transition">
             <div className="relative w-full h-48">
               <Image src={product.image} alt={product.name} layout="fill" objectFit="cover" className="rounded-lg" />
             </div>
             <h3 className="text-lg font-semibold mt-3">{product.name}</h3>
-            <p className="text-blue-600 font-bold">Kshs. {product.price}</p>
+            <p className="text-blue-600 font-bold">$ {product.price}</p>
           </Link>
         ))}
       </div>
