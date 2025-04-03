@@ -72,9 +72,9 @@ export default function Products() {
                   </Link>
                   <h3 className="mt-4 text-sm text-blue-700">{name}</h3>
                   <h3 className="mt-4 text-sm text-blue-700">In Stock: {stock}</h3>
-                  <p className="mt-1 text-lg font-medium text-gray-900">@ $ {price.toFixed(2)}</p>
+                  {/* <p className="mt-1 text-lg font-medium text-gray-900">@ $ {price.toFixed(2)}</p> */}
 
-                  <button
+                  {/* <button
                     disabled={stock === 0}
                     onClick={() => addToCart({ _id, name, price, stock, image })}
                     className={`mt-2 w-full py-2 rounded-md transition ${
@@ -82,7 +82,7 @@ export default function Products() {
                     }`}
                   >
                     {stock > 0 ? "Add to Cart" : "Out of Stock"}
-                  </button>
+                  </button> */}
                 </div>
               ))}
             </div>

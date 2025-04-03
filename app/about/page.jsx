@@ -29,12 +29,30 @@ export default function About() {
         </div>
       </section>
 
+      
+      {/* Leadership Section */}
+      <section className="container mx-auto py-16 px-6 text-center">
+        <h2 className="text-3xl font-semibold text-blue-600">Leadership</h2>
+        <div className="mt-8 flex flex-col items-center">
+          <div className="bg-white shadow-lg rounded-lg p-6 w-80 text-center">
+            <Image 
+              src="/ceo.png" 
+              alt="CEO" 
+              width={150} 
+              height={150} 
+              className="rounded-full mx-auto"
+            />
+            <h3 className="text-xl font-bold text-gray-900 mt-4">Dr Pinto Okatch</h3>
+            <p className="text-gray-600">Managing Director and Founder</p>
+            <p className="mt-2 text-gray-700">Bsc, Msc in Medical Microbiology, Masinde Muliro University</p>
+          </div>
+        </div>
+      </section>
+
       {/* Our Mission */}
       <section className="container mx-auto py-16 px-6 text-center">
-        <h2 className={`text-3xl font-semibold text-blue-600 transition-opacity duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}>
-          Our Mission
-        </h2>
-        <p className={`mt-4 text-gray-700 max-w-2xl mx-auto transition-opacity duration-1000 delay-200 ${isVisible ? "opacity-100" : "opacity-0"}`}>
+        <h2 className="text-3xl font-semibold text-blue-600">Our Mission</h2>
+        <p className="mt-4 text-gray-700 max-w-2xl mx-auto">
           We are committed to providing top-quality medical supplies to healthcare professionals and individuals, ensuring safety, reliability, and affordability.
         </p>
       </section>
@@ -42,11 +60,9 @@ export default function About() {
       {/* Company Values */}
       <section className="bg-white py-16 px-6">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          {[
-            { title: "Quality", text: "We only source the best medical products to ensure safety and reliability." },
+          {[{ title: "Quality", text: "We only source the best medical products to ensure safety and reliability." },
             { title: "Innovation", text: "We continuously improve our offerings to meet the evolving needs of healthcare." },
-            { title: "Customer Focus", text: "Our customers are at the heart of everything we do." }
-          ].map((value, index) => (
+            { title: "Customer Focus", text: "Our customers are at the heart of everything we do." }].map((value, index) => (
             <div 
               key={value.title} 
               className={`p-6 shadow-lg rounded-lg bg-gray-100 transform transition-all duration-1000 ease-out delay-${index * 200} ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"}`}
@@ -57,6 +73,7 @@ export default function About() {
           ))}
         </div>
       </section>
+
 
       {/* Call to Action */}
       <section className="text-center py-16">
