@@ -36,7 +36,7 @@ const BestSellers = () => {
               <Image src={product.image} alt={product.name} layout="fill" objectFit="cover" className="rounded-lg" />
             </div>
             <h3 className="text-lg font-semibold mt-3">{product.name}</h3>
-            <p className="text-blue-600 font-bold">$ {product.price}</p>
+            {/* <p className="text-blue-600 font-bold">$ {product.price}</p> */}
           </Link>
         ))}
       </div>
