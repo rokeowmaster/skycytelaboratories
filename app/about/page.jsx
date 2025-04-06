@@ -21,7 +21,7 @@ export default function About() {
           layout="fill" 
           objectFit="cover" 
           priority 
-          className="absolute inset-0 opacity-50"
+          className="absolute inset-0"
         />
         <div className={`relative text-center z-10 transition-opacity duration-1000 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <h1 className="text-5xl font-bold">About Us</h1>
