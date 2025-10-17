@@ -31,7 +31,7 @@ const leadership = [
     alt: "CEO",
     name: "Dr Pinto Okatch",
     role: "Managing Director and Founder",
-    description: "Bsc, mls, Dmls, Cmls, Msc in Medical Microbiology, Masinde Muliro University"
+    description: "Msc (option Medical Microbiology), Bsc.MLS, DMLS, CMLS, , Masinde Muliro University"
   },
   {
     src: "/cto.jpg",

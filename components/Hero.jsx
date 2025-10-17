@@ -9,10 +9,10 @@ const Hero = () => {
       style={{ backgroundImage: "url('/hero-bg.jpg')" }}
     >
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 animate-slide-in">
-        Trusted Medical Supplies
+        Trusted Medical Laboratory Supplies
       </h1>
       <p className="text-sm sm:text-base md:text-lg opacity-90 animate-fade-in max-w-md mx-auto">
-        Reliable, high-quality medical products for professionals and individuals.
+        Reliable, high-quality medical laboratory products for professionals and individuals.
       </p>
       <Link href="/products">
         <Button className="mt-5 bg-white text-blue-600 px-5 py-2.5 rounded-full hover:bg-blue-500 hover:text-white transition">
