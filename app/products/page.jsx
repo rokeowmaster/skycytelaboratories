@@ -10,7 +10,7 @@ import { getProduct } from "@/sanityclient/query";
 import { urlFor } from "@/sanityclient/client";
 import client from "@/sanityclient/client"; // Ensure the correct client is imported
 
-const categories = ["All", "Protection", "Hygiene", "Equipment", "Apparel"];
+const categories = ["All", "Protection", "Equipment"];
 
 export default function Products() {
   const [selectedCategory, setSelectedCategory] = useState("All");
