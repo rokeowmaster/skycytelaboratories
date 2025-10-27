@@ -31,9 +31,9 @@ const Nav = () => {
             alt="Company Logo"
             className="h-10 w-10 md:h-12 md:w-12 rounded-full object-cover cursor-pointer"
           />
-          {/* Company Name (hidden on mobile) */}
-          <span className="hidden md:inline text-2xl font-semibold text-black">
-            Skycyte Ltd
+          {/* Company Name (now visible on all screens, resizes responsively) */}
+          <span className="text-lg sm:text-xl md:text-2xl font-semibold text-black truncate max-w-[120px] sm:max-w-none">
+            Skycyte Medical Ltd
           </span>
         </Link>
 

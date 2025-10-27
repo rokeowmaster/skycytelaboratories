@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "SkyCyte - Medical Laboratory Supplies Ltd",
+  title: "SkyCyte Medical  Limited",
   keywords: "Skycyte, medical laboratory supplies, e-commerce, healthcare technology",
   description: "Skycyte is an medical supplies e-commerce platform",
   icons: {

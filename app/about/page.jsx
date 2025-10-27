@@ -30,7 +30,7 @@ const leadership = [
     src: "/ceo.png",
     alt: "CEO",
     name: "Dr Pinto Okatch",
-    role: "Managing Director and Founder",
+    role: "Managing Director and Founder of Skycyte Medical Limited",
     description: "Msc (option Medical Microbiology), Bsc.MLS, DMLS, CMLS, , Masinde Muliro University"
   },
   {

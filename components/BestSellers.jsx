@@ -19,6 +19,7 @@ const BestSellers = () => {
         { id: 6, name: 'Pulse Oximeter', price: '18.99', image: '/oximeter.jpg' },
         { id: 7, name: 'Surgical Gown', price: '14.99', image: '/gown.png' },
         { id: 8, name: 'First Aid Kit', price: '29.99', image: '/first-aid-kit.webp' },
+        { id: 9, name: 'Blood collection tubes', price: '29.99', image: '/vacuntainers.jpg' },
       ];
       setProducts(mockData);
     };
