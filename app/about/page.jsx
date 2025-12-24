@@ -123,7 +123,7 @@ export default function About() {
       </div>
       </section>
       
-      <div className="h-[150px]" />
+      <div className="h-[50px]" />
       {/* Our Mission */}
       <section className="container mx-auto py-16 px-6 text-center">
         <h2 className="text-3xl font-semibold text-blue-600">Our Mission</h2>
