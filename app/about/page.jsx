@@ -5,7 +5,8 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const LeaderCard = ({ src, alt, name, role, description }) => (
-  <div className="bg-white shadow-lg rounded-lg p-6 mt-8 w-80 text-center">
+  <div className="group w-80 rounded-2xl bg-slate-50/95 border border-slate-200 p-6 text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+
     <Image 
       src={src} 
       alt={alt} 
@@ -64,39 +65,65 @@ export default function About() {
   return (
     <div className="bg-gray-50 text-gray-900 min-h-screen">
 
-      {/* Hero Section */}
-      <section className="relative flex items-center justify-center h-screen text-white bg-gray-900">
-        <Image 
-          src="/about-bg.jpg" 
-          alt="About Us Background" 
-          layout="fill" 
-          objectFit="cover" 
-          priority 
-          className="absolute inset-0"
-        />
-        <div className={`relative text-center z-10 transition-opacity duration-1000 ease-out transform ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-          <h1 className="text-5xl font-bold">About Us</h1>
-          <p className="text-lg mt-2 opacity-90">Providing Quality Medical Supplies for a Healthier Tomorrow</p>
+     <section className="relative min-h-screen text-white bg-gray-900 overflow-hidden">
+      {/* Background Image */}
+      <Image
+        src="/about-bg.jpg"
+        alt="About Us Background"
+        fill
+        priority
+        className="object-cover"
+      />
+
+      {/* Dark overlay for readability */}
+      <div className="absolute inset-0 bg-black/55" />
+
+      {/* Hero Content Wrapper */}
+      <div className="relative z-10 flex flex-col min-h-screen">
+
+        {/* TOP: Hero Text */}
+        <div
+          className={`flex flex-col items-center text-center pt-28 transition-opacity duration-1000 ease-out ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
+          <h1 className="text-5xl font-bold tracking-tight">About Us</h1>
+          <p className="text-lg mt-3 opacity-90 max-w-2xl">
+            Providing Quality Medical Supplies for a Healthier Tomorrow
+          </p>
         </div>
+
+        {/* Spacer pushes leadership down naturally */}
+        <div className="flex-grow" />
+
+        {/* BOTTOM: Leadership */}
+        <div className="relative z-20 pb-20">
+          <div className="container mx-auto px-6 text-center">
+
+            <h2 className="text-3xl font-semibold tracking-wide">
+              Our Leadership
+            </h2>
+            <div className="mx-auto mt-3 mb-10 h-1 w-16 rounded-full bg-blue-400" />
+
+            {/* CEO */}
+            <div className="flex justify-center">
+              <LeaderCard {...leadership[0]} />
+            </div>
+
+            {/* Other Leaders */}
+            <div className="flex justify-center gap-8 mt-10 flex-wrap">
+              {leadership.slice(1).map((leader) => (
+                <LeaderCard key={leader.name} {...leader} />
+              ))}
+            </div>
+
+          </div>
+        </div>
+
+      </div>
       </section>
-
-      {/* Leadership Section */}
-      <section className="container mx-auto py-16 px-6 text-center">
-        <h2 className="text-3xl font-semibold text-blue-600">Leadership</h2>
-
-        {/* CEO */}
-        <div className="mt-8 flex justify-center">
-          <LeaderCard {...leadership[0]} />
-        </div>
-
-        {/* Other Leaders inline */}
-        <div className="flex justify-center space-x-8 mt-8 flex-wrap">
-          {leadership.slice(1).map((leader) => (
-            <LeaderCard key={leader.name} {...leader} />
-          ))}
-        </div>
-      </section>
-
+      
+      <div className="h-[150px]" />
       {/* Our Mission */}
       <section className="container mx-auto py-16 px-6 text-center">
         <h2 className="text-3xl font-semibold text-blue-600">Our Mission</h2>
